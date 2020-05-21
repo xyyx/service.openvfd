@@ -49,7 +49,7 @@ class vfdAddon():
 		self._vfdon = '/sys/class/leds/openvfd/led_on'
 		self._vfdoff = '/sys/class/leds/openvfd/led_off'
 		self._rlock = threading.RLock()
-		self._modeManager = vfddisplay.vfdDisplayManager('/tmp/openvfd_service', self._rlock)
+		self._modeManager = vfddisplay.vfdDisplayManager('/data/tmp/openvfd_service', self._rlock)
 		self._modes = [
 				vfddisplay.vfdDisplayModeTemperature(self._modeManager, self._settings),
 				vfddisplay.vfdDisplayModeDate(self._modeManager, self._settings),
